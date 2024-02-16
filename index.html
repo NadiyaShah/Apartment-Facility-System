@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Facility Booking System</title>
+</head>
+
+<body>
+    <div class="maindiv">
+        <h2 style="font-weight: 800; color: black;">Apartment Facilities Booking System</h2>
+        <form id="bookingForm"
+            style="border: 4px solid blueviolet; padding: 50px 50px 50px 50px; display: flex ; flex-direction: column ; margin-bottom: 50px; background-color: azure; border-radius: 20px;">
+
+            <label for="text">Name:</label>
+            <input type="text" id="name" required placeholder="Enter your Name..">
+
+            <label for="number">Apartment Number:</label>
+            <input type="number" id="appt" required placeholder="Enter your Appt. Number ..">
+
+            <label for="facility">Facilities:</label>
+
+            <select id="facility">
+                <option value="Clubhouse">Clubhouse</option>
+                <option value="Tennis Court">Tennis Court</option>
+
+            </select>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" value="2024-01-01">
+
+            <label for="startTime">Start Time:</label>
+            <input type="time" id="startTime" required>
+
+            <label for="endTime">End Time:</label>
+            <input type="time" id="endTime" required>
+
+            <button type="submit" style="font-size: 20px; font-weight: 600;"
+                onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Book
+                Now !!</button>
+        </form>
+    </div>
+
+    <div id="fade" class="black_overlay"></div>
+
+    <div id="light" class="white_content"><a href="javascript:void(0)"
+            onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a>
+        <div id="output">
+
+        </div>
+    </div>
+
+
+
+
+    <script src="facility.js"></script>
+</body>
+
+</html>
